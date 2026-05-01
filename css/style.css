@@ -13,6 +13,7 @@
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
+  text-rendering: optimizeLegibility;
 }
 
 * {
@@ -25,6 +26,7 @@ body {
   display: grid;
   place-items: center;
   padding: clamp(1rem, 4vw, 2rem);
+  text-align: center;
   background:
     linear-gradient(180deg, rgba(183, 143, 69, 0.1), transparent 300px),
     var(--bg);
@@ -39,11 +41,13 @@ input {
   width: min(680px, 100%);
   display: grid;
   gap: 1rem;
+  justify-items: center;
 }
 
 .hero,
 .calculator,
 .results {
+  width: 100%;
   background: rgba(12, 12, 12, 0.95);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -69,6 +73,7 @@ h1 {
   font-size: clamp(2rem, 7vw, 3.2rem);
   line-height: 1.18;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 .lede,
@@ -91,6 +96,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.65rem;
+  align-items: center;
 }
 
 input[type="number"] {
@@ -109,12 +115,14 @@ input[type="number"]::placeholder {
 
 button {
   min-height: 46px;
+  min-width: 118px;
   border: 1px solid var(--gold);
   border-radius: 6px;
   padding: 0.7rem 1.1rem;
   background: var(--gold);
   color: #090806;
   font-weight: 600;
+  line-height: 1.2;
   cursor: pointer;
 }
 
@@ -153,6 +161,7 @@ button:hover {
   border-radius: 8px;
   padding: 0.9rem;
   background: rgba(255, 255, 255, 0.025);
+  text-align: center;
 }
 
 .result-label,
